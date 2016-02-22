@@ -113,7 +113,7 @@ public class CropImageView extends ImageView {
     final int viewWidth = getWidth() - getPaddingLeft() - getPaddingRight();
     final int viewHeight = getHeight() - getPaddingTop() - getPaddingBottom();
 
-    if (cropType != CropType.NONE && viewHeight > 0 && viewWidth > 0) {
+    if (cropType != CropType.NONE && viewHeight > 0 && viewWidth > 0 && getDrawable() != null) {
       final Matrix matrix = imageMaths.getMatrix();
 
       final int drawableWidth = getDrawable().getIntrinsicWidth();
